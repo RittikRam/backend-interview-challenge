@@ -3,12 +3,12 @@ export interface Task {
   title: string;
   description?: string;
   completed: boolean;
-  created_at: Date;
-  updated_at: Date;
+  created_at: string;
+  updated_at: string;
   is_deleted: boolean;
   sync_status?: 'pending' | 'synced' | 'error';
-  server_id?: string;
-  last_synced_at?: Date;
+  server_id?: string | null;
+  last_synced_at?: string | null;
 }
 
 export interface SyncQueueItem {
